@@ -1,0 +1,21 @@
+# HTCondor submit file for CERN LXPLUS
+universe       = vanilla
+executable     = run_job_ECAL_Resolution.sh
+arguments      = $(Process)
+
+# Resource requirements
+request_cpus   = 1
+request_memory = 8GB
+request_disk   = 20GB
+
+# Logging paths
+log    = logs/calo_production.$(Cluster).$(Process).log
+output = logs/calo_production.$(Cluster).$(Process).out
+error  = logs/calo_production.$(Cluster).$(Process).err
+
+# Job duration
++MaxRuntime    = 86400
++JobFlavour    = "tomorrow"
+
+# Queue 5 jobs (for 5000, 10000, 20000, 50000, 100000 MeV)
+queue 5

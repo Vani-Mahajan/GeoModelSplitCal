@@ -83,7 +83,7 @@ GeoPhysVol* DetectorConstruction::buildGeoModelWorld()
   MaterialManager MM;
   auto* air = MM.air();
 
-  auto cfg = readConfigFile(m_cfgFile);
+  auto cfg = readConfigFile("../calo.cfg");
   
   double aworldZ = GetSystemThickness(cfg.layers,cfg.scint_thickness_mm,cfg.scint_thickness_mm,cfg.hpl_thickness_mm,cfg.lead_thickness_mm,cfg.airgap_mm);
   aworldZ += cfg.gap_ecal_hcal_mm;
@@ -353,7 +353,7 @@ VolumeBuilder vb("World");   // key string can be anything; "World" is fine
 
 
   else if (visMode == 1) {
-    auto* visECALlead  = new G4VisAttributes(G4Colour(0.6, 0.6, 0.6, 0.7)); visECALlead->SetForceSolid(true);  visECALlead->SetDaughtersInvisible(true);
+    auto* visECALiron  = new G4VisAttributes(G4Colour(0.6, 0.6, 0.6, 0.7)); visECALiron->SetForceSolid(true);  visECALiron->SetDaughtersInvisible(true);
     auto* visECALscint = new G4VisAttributes(G4Colour(0.0, 0.8, 0.4, 0.7)); visECALscint->SetForceSolid(true); visECALscint->SetDaughtersInvisible(true);
     auto* visECALhpl   = new G4VisAttributes(G4Colour(0.1, 0.3, 1.0, 0.7)); visECALhpl->SetForceSolid(true);   visECALhpl->SetDaughtersInvisible(true);
     auto* visHCALiron  = new G4VisAttributes(G4Colour(0.9, 0.1, 0.1, 0.7)); visHCALiron->SetForceSolid(true);  visHCALiron->SetDaughtersInvisible(true);
@@ -364,7 +364,7 @@ VolumeBuilder vb("World");   // key string can be anything; "World" is fine
       if      (n == "WorldLog" || n == "World")          lv->SetVisAttributes(visWorld);
       else if (n.find("ModuleLog") != std::string::npos) lv->SetVisAttributes(visModule);
       else if (n.find("ECAL") != std::string::npos && n.find("_LOG") != std::string::npos) {
-        if      (n.find("Lead") != std::string::npos) lv->SetVisAttributes(visECALlead);
+        if      (n.find("Iron") != std::string::npos) lv->SetVisAttributes(visECALiron);
         else if (n.find("HPL")  != std::string::npos) lv->SetVisAttributes(visECALhpl);
         else                                           lv->SetVisAttributes(visECALscint);
       }

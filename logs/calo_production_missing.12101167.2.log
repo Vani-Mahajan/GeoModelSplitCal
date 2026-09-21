@@ -1,0 +1,162 @@
+000 (12101167.001.000) 09/07 18:10:59 Job submitted from host: <188.185.6.50:9618?addrs=188.185.6.50-9618+[2001-1458-d00-62--100-2b1]-9618&alias=bigbird25.cern.ch&noUDP&sock=schedd_5755_07a0>
+...
+040 (12101167.001.000) 09/07 18:49:41 Started transferring input files
+	Transferring to host: <188.185.210.185:9618?addrs=188.185.210.185-9618+[2001-1458-303-15--100-35]-9618&alias=b9p22p6649.cern.ch&noUDP&sock=slot1_10_6528_5103_69433>
+...
+040 (12101167.001.000) 09/07 18:49:41 Finished transferring input files
+...
+001 (12101167.001.000) 09/07 18:49:42 Job executing on host: <188.185.210.185:9618?addrs=188.185.210.185-9618+[2001-1458-303-15--100-35]-9618&alias=b9p22p6649.cern.ch&noUDP&sock=startd_5780_2d7e>
+	SlotName: slot1_10@b9p22p6649.cern.ch
+	CondorScratchDir = "/pool/condor/dir_1229771"
+	Cpus = 3
+	Disk = 20974435
+	GPUs = 0
+	Memory = 9000
+...
+006 (12101167.001.000) 09/07 18:49:51 Image size of job updated: 203960
+	200  -  MemoryUsage of job (MB)
+	203960  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 18:54:52 Image size of job updated: 214736
+	210  -  MemoryUsage of job (MB)
+	214736  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 18:59:52 Image size of job updated: 218996
+	214  -  MemoryUsage of job (MB)
+	218996  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:04:52 Image size of job updated: 225268
+	220  -  MemoryUsage of job (MB)
+	225268  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:09:53 Image size of job updated: 226136
+	221  -  MemoryUsage of job (MB)
+	226136  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:14:53 Image size of job updated: 231020
+	226  -  MemoryUsage of job (MB)
+	231020  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:19:54 Image size of job updated: 231304
+	226  -  MemoryUsage of job (MB)
+	231304  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:24:54 Image size of job updated: 231880
+	227  -  MemoryUsage of job (MB)
+	231880  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:29:55 Image size of job updated: 242664
+	237  -  MemoryUsage of job (MB)
+	242664  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:34:55 Image size of job updated: 244328
+	239  -  MemoryUsage of job (MB)
+	244328  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:39:55 Image size of job updated: 260580
+	255  -  MemoryUsage of job (MB)
+	260580  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:44:56 Image size of job updated: 260604
+	255  -  MemoryUsage of job (MB)
+	260604  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:49:56 Image size of job updated: 260628
+	255  -  MemoryUsage of job (MB)
+	260628  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:54:57 Image size of job updated: 262700
+	257  -  MemoryUsage of job (MB)
+	262700  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 19:59:57 Image size of job updated: 262724
+	257  -  MemoryUsage of job (MB)
+	262724  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:04:58 Image size of job updated: 262752
+	257  -  MemoryUsage of job (MB)
+	262752  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:09:58 Image size of job updated: 264824
+	259  -  MemoryUsage of job (MB)
+	264824  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:14:59 Image size of job updated: 264848
+	259  -  MemoryUsage of job (MB)
+	264848  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:19:59 Image size of job updated: 264868
+	259  -  MemoryUsage of job (MB)
+	264868  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:25:00 Image size of job updated: 264892
+	259  -  MemoryUsage of job (MB)
+	264892  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:30:00 Image size of job updated: 267300
+	262  -  MemoryUsage of job (MB)
+	267300  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:35:01 Image size of job updated: 267320
+	262  -  MemoryUsage of job (MB)
+	267320  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:40:01 Image size of job updated: 267340
+	262  -  MemoryUsage of job (MB)
+	267340  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:45:02 Image size of job updated: 285124
+	279  -  MemoryUsage of job (MB)
+	284696  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:50:02 Image size of job updated: 287072
+	281  -  MemoryUsage of job (MB)
+	286744  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 20:55:03 Image size of job updated: 289284
+	283  -  MemoryUsage of job (MB)
+	288792  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 21:00:03 Image size of job updated: 289348
+	283  -  MemoryUsage of job (MB)
+	288848  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 21:05:04 Image size of job updated: 289408
+	283  -  MemoryUsage of job (MB)
+	288864  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 21:10:04 Image size of job updated: 290908
+	285  -  MemoryUsage of job (MB)
+	290908  -  ResidentSetSize of job (KB)
+...
+006 (12101167.001.000) 09/07 21:15:05 Image size of job updated: 291524
+	285  -  MemoryUsage of job (MB)
+	290908  -  ResidentSetSize of job (KB)
+...
+040 (12101167.001.000) 09/07 21:21:11 Started transferring output files
+...
+040 (12101167.001.000) 09/07 21:21:11 Finished transferring output files
+...
+021 (12101167.001.000) 09/07 21:21:11 Error from starter on slot1_10@b9p22p6649.cern.ch:
+	STARTER at 188.185.210.185 failed to send file(s) to <188.185.6.50:9618>; SHADOW at 188.185.6.50 - |Error: writing to file /afs/cern.ch/user/m/mahajanv/GeoModelSplitCal/logs/calo_production_missing.12101167.2.err: (errno 122) Disk quota exceeded
+	Code 12 Subcode 122
+...
+004 (12101167.001.000) 09/07 21:21:12 Job was evicted. Code 12 Subcode 122
+	(0) CPU times
+		Usr 0 02:28:21, Sys 0 00:00:37  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	1050  -  Run Bytes Received By Job
+	Reason: Transfer output files failure at access point bigbird25 while receiving files from execution point slot1_10@b9p22p6649.cern.ch. Details: writing to file /afs/cern.ch/user/m/mahajanv/GeoModelSplitCal/logs/calo_production_missing.12101167.2.err: (errno 122) Disk quota exceeded
+	Partitionable Resources :      Usage  Request Allocated 
+	   Cpus                 :       0.98        3         3 
+	   Disk (KB)            : 4498630    20971520  20974435 
+	   GPUs                 :                             0 
+	   Memory (MB)          :     285        9000      9000 
+	   TimeExecute (s)      :    9089                       
+	   TimeSlotBusy (s)     :    9101                       
+...
+012 (12101167.001.000) 09/07 21:21:12 Job was held.
+	Transfer output files failure at access point bigbird25 while receiving files from execution point slot1_10@b9p22p6649.cern.ch. Details: writing to file /afs/cern.ch/user/m/mahajanv/GeoModelSplitCal/logs/calo_production_missing.12101167.2.err: (errno 122) Disk quota exceeded
+	Code 12 Subcode 122
+...

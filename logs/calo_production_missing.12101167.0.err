@@ -1,0 +1,2 @@
+mkdir: cannot create directory ‘/afs/user’: Read-only file system
+mv: cannot move './calosim_out_10000MeV_mu-.root' to '/afs/user/m/mahajanv/GeoModelSplitCal/sim_results/sim_e-_10k_5000MeV.root': No such file or directory
