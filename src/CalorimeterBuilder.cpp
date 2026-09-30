@@ -22,18 +22,6 @@ void CalorimeterBuilder::buildStack(GeoVPhysVol* world, MaterialManager& MM, con
 
   const double plateXY = cfg.plate_xy_mm * mm;
 
-  const double totalX = cfg.plate_xy_mm * mm;
-  const double totalY = cfg.plate_xy_mm * mm;
-
-  const double moduleGap = cfg.module_gap_mm * mm;
-
-  const double moduleX =
-    (totalX - (cfg.module_nx - 1) * moduleGap)
-    / cfg.module_nx;
-
-  const double moduleY =
-    (totalY - (cfg.module_ny - 1) * moduleGap)
-    / cfg.module_ny;
   const double leadZ   = cfg.lead_thickness_mm * mm;
   const double scintZ  = cfg.scint_thickness_mm * mm;
   const double airGapZ = cfg.airgap_mm * mm;
@@ -63,6 +51,16 @@ void CalorimeterBuilder::buildStack(GeoVPhysVol* world, MaterialManager& MM, con
   
       return envPhys;
   };
+
+      auto makeAirGap = [&](const std::string& gapName, double zCenter, double thickness) {
+        if (thickness <= 0.0) return;
+        auto* gapShape = new GeoBox(0.5 * plateXY, 0.5 * plateXY, 0.5 * thickness);
+        auto* gapLog = new GeoLogVol((gapName + "_LOG").c_str(), gapShape, MM.air());
+        auto* gapPhys = new GeoPhysVol(gapLog);
+        world->add(new GeoNameTag(gapName.c_str()));
+        world->add(new GeoTransform(GeoTrf::Translate3D(0.0, 0.0, zCenter)));
+        world->add(gapPhys);
+      };
 
 
 
@@ -130,29 +128,9 @@ void CalorimeterBuilder::buildStack(GeoVPhysVol* world, MaterialManager& MM, con
   int iWideH=0, iWideV=0, iThinH=0, iThinV=0, iLead=0, iGap=0, iHPL=0;
   
   double zCursor = cfg.center_stack ? -0.5 * totalZ : 0.0;
-  
-  auto* moduleBox = new GeoBox(0.5 * moduleX, 0.5 * moduleY, 0.5 * totalZ);
-  auto* moduleLog = new GeoLogVol("ModuleLog", moduleBox, MM.air());
+  auto* modulePhys = world;
 
-  for (int mx = 0; mx < cfg.module_nx; ++mx) {
-	  for (int my = 0; my < cfg.module_ny; ++my) {
-         	  
-		  const double moduleCenterX =
-			  -0.5 * totalX
-                          + 0.5 * moduleX
-                          + mx * (moduleX + moduleGap);
-		  const double moduleCenterY =
-			  -0.5 * totalY
-                          + 0.5 * moduleY
-                          + my * (moduleY + moduleGap);
-		  
-                  auto* modulePhys = new GeoPhysVol(moduleLog);
-                  world->add(new GeoNameTag(("Module_MX" + std::to_string(mx) + "Y" + std::to_string(my)).c_str()));
-                  world->add(new GeoTransform(GeoTrf::Translate3D(moduleCenterX, moduleCenterY, 0.0)));
-                  world->add(modulePhys);
-
-		  double zCursor = -0.5 * totalZ;
-		  
+  {
 		  int globalsensLayer = 0;
 		  int globalLayer = 0;
 		  for (int code : cfg.layers) {
@@ -361,11 +339,11 @@ void CalorimeterBuilder::buildStack(GeoVPhysVol* world, MaterialManager& MM, con
         globalsensLayer++;
     }
     else if (code == 8) {
-      // airgap: no volume needed; just advance z
+      const std::string gapName = "ECAL_AirGap_GL" + std::to_string(globalLayer) + mtag;
+      makeAirGap(gapName, zCursor + 0.5 * airGapZ, airGapZ);
       zCursor += airGapZ;
       ++iGap;
     }
-   }
   }
   }
   int iIron = 0;  // iron counter
