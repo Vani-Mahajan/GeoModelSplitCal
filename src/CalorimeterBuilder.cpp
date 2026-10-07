@@ -502,4 +502,3 @@ void CalorimeterBuilder::buildStack(GeoVPhysVol* world, MaterialManager& MM, con
 
 
 
-

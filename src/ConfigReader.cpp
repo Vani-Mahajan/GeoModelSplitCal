@@ -65,6 +65,8 @@ CalorimeterConfig readConfigFile(const std::string& path)
     else if (key == "module_ny") cfg.module_ny = std::stoi(val);
     else if (key == "module_pitch_x_mm") cfg.module_pitch_x_mm = std::stod(val);
     else if (key == "module_pitch_y_mm") cfg.module_pitch_y_mm = std::stod(val);
+    else if (key == "boundary_air_mm") cfg.boundary_air_mm = std::stod(val);
+    else if (key == "boundary_steel_mm") cfg.boundary_steel_mm = std::stod(val);
     else if (key == "gap_ecal_hcal_mm") cfg.gap_ecal_hcal_mm = std::stod(val);
     else if (key == "tol_x_mm") cfg.tol_x_mm = std::stod(val);
     else if (key == "tol_y_mm") cfg.tol_y_mm = std::stod(val);
